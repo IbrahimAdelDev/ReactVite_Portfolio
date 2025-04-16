@@ -1,0 +1,36 @@
+.MyphotoStyle {
+  width: 450px;
+}
+
+.BubbleStyle {
+  clip-path: ellipse(49%38% at 50% 49%);
+  background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 100%);
+  position: absolute;
+  top: 40%;
+  left: 60%;
+  width: 10rem;
+  height: 10rem;
+  z-index: -1;
+}
+
+.hid {
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+@media screen and (max-width: 992px) {
+  .MyphotoStyle {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .MyphotoStyle {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .MyphotoStyle {
+    width: 300px;
+  }
+}
