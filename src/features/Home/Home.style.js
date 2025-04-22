@@ -1,5 +1,4 @@
-export const HeroSectionStyle =
-  'md:flex block justify-around item-center pt-8 pb-16 bg-blue-50';
+export const HeroSectionStyle = 'md:flex block justify-around items-center';
 export const H1Style = 'text-left text-4xl font-bold my-4';
 export const PStyle =
   'text-left text-lg text-wrap text-justify leading-relaxed tracking-normal';

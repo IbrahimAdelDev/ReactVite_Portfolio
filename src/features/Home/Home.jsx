@@ -1,7 +1,9 @@
 import React from 'react';
 import Myphoto from '../../assets/images/Me.png';
+// import Myphoto from '../../assets/images/MyAiPhoto.png';
 import Navbar from '../../layouts/Navbar/Navbar.jsx';
 import useScroll from '../../hooks/UseScroll.js';
+import ParticleComponent from '../../components/ParticleComponent.jsx';
 
 import {
   HeroSectionStyle,
@@ -19,8 +21,12 @@ const Home = () => {
   const showFixedNavbar = useScroll('HeroSection');
   return (
     <>
+      <ParticleComponent className={`bg-blue-50`} />
       <Navbar />
-      <section className={HeroSectionStyle} id="HeroSection">
+      <section
+        className={`${HeroSectionStyle} HeroSectionStyle`}
+        id="HeroSection"
+      >
         <div className={leftDiv}>
           <h1 className={H1Style}>
             Hi, I am Ibrahim
@@ -58,9 +64,9 @@ const Home = () => {
     }
   `}
       />
-      <div className="w-full h-dvh">
+      {/* <div className="w-full h-dvh">
         <div className="h-96 bg-blue-500 w-96"></div>
-      </div>
+      </div> */}
     </>
   );
 };
