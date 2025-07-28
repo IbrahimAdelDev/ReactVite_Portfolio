@@ -1,8 +1,7 @@
-import React from 'react';
-import Myphoto from '../../assets/images/Me.png';
-// import Myphoto from '../../assets/images/MyAiPhoto.png';
-import Navbar from '../../layouts/Navbar/Navbar.jsx';
-import useScroll from '../../hooks/UseScroll.js';
+import Myphoto from '../../assets/images/Portfolio_image.png';
+import bgHeroImage from '../../assets/images/bg-portfolio.png'; // أضف هذا السطر
+import Navbar from '../../components/Navbar/Navbar.jsx';
+// import useScroll from '../../hooks/UseScroll.js';
 import ParticleComponent from '../../components/ParticleComponent.jsx';
 
 import {
@@ -13,16 +12,19 @@ import {
   H1Style,
   PStyle,
   LinkBtnStyle,
+  // bgImage, // This is the background image style
   // BubbleStyle,
 } from './Home.style.js';
 import './Home.css';
 
 const Home = () => {
-  const showFixedNavbar = useScroll('HeroSection');
+  // const showFixedNavbar = useScroll('HeroSection');
   return (
     <>
-      <ParticleComponent className={`bg-blue-50`} />
-      <Navbar />
+      <Navbar className={'fixed w-full top-0'}/>
+      <ParticleComponent className={`bg-cover bg-center bg-no-repeat h-screen w-full`}
+        style={{backgroundImage: `url(${bgHeroImage})`}}
+       />
       <section
         className={`${HeroSectionStyle} HeroSectionStyle`}
         id="HeroSection"
@@ -45,7 +47,6 @@ const Home = () => {
           >
             download
           </a>
-          <div className={`BubbleStyle`}></div>
         </div>
         <div className={rightDiv}>
           <img
@@ -55,7 +56,8 @@ const Home = () => {
           />
         </div>
       </section>
-      <Navbar
+      {/* <ParticleComponent className={`bg-[#214979]`} /> */}
+      {/* <Navbar
         className={`!bg-blue-100 overflow-hidden transition-transform ease-in-out duration-900
     ${
       showFixedNavbar
@@ -63,7 +65,7 @@ const Home = () => {
         : 'absolute top-0 -translate-y-full max-h-0 opacity-0 pointer-events-none'
     }
   `}
-      />
+      /> */}
       {/* <div className="w-full h-dvh">
         <div className="h-96 bg-blue-500 w-96"></div>
       </div> */}

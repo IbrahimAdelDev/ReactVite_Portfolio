@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import MyLogo from '../../assets/images/Myiconlight.svg';
 import MyLogo2 from '../../assets/images/Myiconlight2.svg';

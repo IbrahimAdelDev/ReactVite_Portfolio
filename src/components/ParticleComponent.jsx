@@ -1,7 +1,9 @@
+// components/ParticleComponent.jsx
+
 import React, { useEffect } from 'react';
 import config from './../../particlesjs-config.json';
 
-const ParticleComponent = (props) => {
+const ParticleComponent = ({ className = '' }) => {
   useEffect(() => {
     if (window.particlesJS) {
       window.particlesJS('particles-js', config);
@@ -11,7 +13,7 @@ const ParticleComponent = (props) => {
   return (
     <div
       id="particles-js"
-      className={`${props.className} fixed w-full h-full z-[-1]`}
+      className={`fixed top-0 left-0 w-screen h-screen z-[-1] pointer-events-auto ${className}`}
     />
   );
 };
