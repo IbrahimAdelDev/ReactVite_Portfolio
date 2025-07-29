@@ -1,0 +1,1 @@
+export const FooterStyle = 'fixed flex-row justify-center bottom-0 left-0 w-full text-center text-md z-10 gap-2 sm:gap-8';
