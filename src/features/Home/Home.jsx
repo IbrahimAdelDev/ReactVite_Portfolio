@@ -23,7 +23,7 @@ const Home = () => {
         // style={{backgroundImage: `url(${bgHeroImage})`}}
       >
         {/* <ParticleComponent className="absolute inset-0 z-0" /> */}
-        <Navbar className={''}/>
+        <Navbar />
         <div className={`${HeroSectionStyle} pt-32 md:pt-32 px-10 z-10`}>
           <div className={leftDiv}>
             <h1 className={H1Style}>

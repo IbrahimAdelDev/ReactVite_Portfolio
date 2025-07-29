@@ -18,7 +18,7 @@ const Navbar = ({ className }) => {
   return (
     <>
       <nav
-        className={`${className} ${NavbarStyle} px-10 pd-4 md:pb-0 fixed w-full top-0 bg-top md:bg-cover`}
+        className={`${className} ${NavbarStyle} px-10 pb-4 md:pb-0 fixed w-full top-0 bg-top md:bg-cover`}
         style={{backgroundImage: `url(${bgHeroImage})`}}
       >
         <div
