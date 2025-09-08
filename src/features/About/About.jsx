@@ -3,17 +3,16 @@ import Navbar from '../../components/Navbar/Navbar.jsx';
 import Contact from '../../components/Contact.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 import bgHeroImage from '../../assets/images/bg-portfolio.png'; 
-import Taps from '../../components/Taps.jsx';
-import Experience from '../../components/Experiences.jsx';
-import Education from '../../components/Education.jsx';
-import Highlights from '../../components/Highlights.jsx';
-import Overview from '../../components/Overview.jsx';
-import Skills from '../../components/Skills.jsx';
+import Taps from '../../components/Aboutpage_Components/Taps.jsx';
+import Overview from '../../components/Aboutpage_Components/Overview.jsx';
+import Experience from '../../components/Aboutpage_Components/Experiences.jsx';
+import Skills from '../../components/Aboutpage_Components/Skills.jsx';
+import Education from '../../components/Aboutpage_Components/Education.jsx';
+import Highlights from '../../components/Aboutpage_Components/Highlights.jsx';
 
 
 import {
   HeroSectionStyle,
-  MyphotoStyle,
   leftDiv,
   rightDiv,
   H1Style,

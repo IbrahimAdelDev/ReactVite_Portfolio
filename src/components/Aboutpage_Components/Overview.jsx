@@ -13,9 +13,9 @@ const highlights = [
 
 export default function Highlights() {
   return (
-    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-2">
-      {/* أول واحدة مميزة */}
-      <div className="col-span-2 p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-lg">
+    <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
+      {/* أول واحدة مميزة - تاخد العرض كله */}
+      <div className="col-span-1 sm:col-span-2 p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-lg">
         <h3 className="text-lg font-semibold text-white mb-2">
           I turn ideas into secure, scalable backends.
         </h3>
@@ -32,12 +32,9 @@ export default function Highlights() {
           key={idx}
           className="flex items-start p-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-lg"
         >
-          {/* النقطة الحمراء */}
           <div className="mr-3 mt-1">
             <span className="inline-flex items-center justify-center w-2 h-2 bg-red-500 rounded-full shadow"></span>
           </div>
-
-          {/* النص */}
           <div className="flex-1">
             <p className="text-sm text-gray-300">{item.subtitle}</p>
           </div>

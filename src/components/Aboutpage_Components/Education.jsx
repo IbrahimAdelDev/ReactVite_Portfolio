@@ -37,7 +37,7 @@ export default function Education() {
         >
           {/* Left Side */}
           <div>
-            <h3 className="text-lg font-semibold text-white">{edu.degree}</h3>
+            <h3 className="text-md font-semibold text-white">{edu.degree}</h3>
             <span className="block text-gray-300 text-sm mt-1">
               {edu.school} — {edu.location}
             </span>

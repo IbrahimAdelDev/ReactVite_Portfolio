@@ -3,10 +3,7 @@ import Navbar from '../../components/Navbar/Navbar.jsx';
 import Contact from '../../components/Contact.jsx';
 import Footer from '../../components/footer/Footer.jsx';
 import bgHeroImage from '../../assets/images/bg-portfolio.png'; 
-import Swipper from '../../components/Servicespage_Components/Swipper/Swipper.jsx';
-import Steps from '../../components/Servicespage_Components/Steps.jsx';
-import BackendHighlights from '../../components/Servicespage_Components/BackendHighlights.jsx';
-import CTA from '../../components/Servicespage_Components/CTA.jsx';
+import ProjectsGrid from '../../components/Workpage_Components/FIlter.jsx';
 
 import {
   FaProjectDiagram,
@@ -22,12 +19,8 @@ import {
 
 import {
   HeroSectionStyle,
-  leftDiv,
-  rightDiv,
-  H1Style,
-  PStyle,
-} from './Services.style.js';
-import './Services.css';
+} from './Work.style.js';
+import './Work.css';
 
 const Features = [
   {
@@ -77,7 +70,7 @@ const Features = [
   },
 ];
 
-const Services = () => {
+const Work = () => {
   return (
     <>
       <section
@@ -86,7 +79,8 @@ const Services = () => {
       >
         <Navbar />
         <div className={`${HeroSectionStyle} pt-20 md:pt-20 px-10 z-10`}>
-          <div className={leftDiv}>
+          <ProjectsGrid />
+          {/* <div className={leftDiv}>
             <h1 className={H1Style}>
               My Services <span className="text-red-700">.</span>
             </h1>
@@ -98,16 +92,14 @@ const Services = () => {
             <Steps/>
           </div>
           <div className={`${rightDiv}`}>
-            {/* <Taps tabs={tabsData} /> */}
             <div className='w-full p-1 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg shadow-lg mb-6'>
               <Swipper features={Features} />
             </div>
             <div>
               <BackendHighlights />
             </div>
-          </div>
+          </div> */}
         </div>
-        <CTA />
         <div className='hidden md:flex bg-gray-700 w-fit mx-auto mb-0 py-4 px-8 rounded-full'>
           <Contact className={`hidden md:flex`} />
         </div>
@@ -117,4 +109,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default Work;
