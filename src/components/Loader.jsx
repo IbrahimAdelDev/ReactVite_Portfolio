@@ -15,7 +15,7 @@ function Loader(props) {
         margin={0}
         radius={10}
         width={8}
-        color= { false ? "#0a5d84" : "#4e0970"}
+        color={props.color ? props.color : "#0a5d84"}
         loading={props.loading}
         cssOverride={override}
         aria-label="Loading Spinner"

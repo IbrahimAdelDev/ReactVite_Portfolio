@@ -1,0 +1,41 @@
+/* زرار النافيجيشن الأساسي */
+.swiper-button-next,
+.swiper-button-prev {
+  top: 50%;                  
+  transform: translateY(25%);
+  color: red;
+  background-color: rgba(0, 0, 0, 0.5);   
+  border-radius: 50%;   
+  width: 30px;           
+  height: 30px;     
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;        
+}
+
+/* تغيير الحجم عند hover */
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  transform: scale(1.15);
+  transition: 0.2s;
+}
+
+/* لو عايز تغيّر الأيقونات نفسها */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 13px;  
+  font-weight: bold;
+}
+
+
+/* لون النقط العادية */
+.swiper-pagination-bullet {
+  background-color: rgba(255, 0, 0, 0.4) !important; /* أحمر شفاف */
+  opacity: 1 !important; /* خليها دايمًا واضحة */
+}
+
+/* لون النقطة النشطة */
+.swiper-pagination-bullet-active {
+  background-color: #ff0000 !important; /* أحمر صريح */
+}
