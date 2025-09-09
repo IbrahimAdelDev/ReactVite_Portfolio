@@ -1,11 +1,6 @@
 import { Link } from 'react-router-dom';
 import bgHeroImage from '../../assets/images/bg-portfolio.png';
 import Contact from '../../components/Contact.jsx';
-// import WhatsappIcon from '../../assets/images/Platform=WhatsApp, Color=Original.svg';
-// import Github from '../../assets/images/Platform=Github, Color=Negative.svg';
-// import Linkedin from '../../assets/images/Platform=LinkedIn, Color=Original.svg';
-// import Gmail from '../../assets/images/g-mail.svg';
-// import Phone from '../../assets/images/call-02.svg';
 
 import {
   NavbarStyle,

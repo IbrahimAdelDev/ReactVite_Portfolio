@@ -1,5 +1,3 @@
-import React from "react";
-
 const highlights = [
   { subtitle: "Delivered secure RESTful APIs and microservices powering 60+ projects across fintech, e-commerce, and SaaS platforms." },
   { subtitle: "Optimized MongoDB and PostgreSQL queries, improving response times for high-traffic apps and large IoT data streams." },
@@ -20,12 +18,11 @@ export default function Highlights() {
           key={idx}
           className="flex items-start p-4 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-lg"
         >
-          {/* النقطة الحمراء */}
           <div className="mr-3">
             <span className="inline-flex items-center justify-center w-2 h-2 bg-red-500 rounded-full shadow"></span>
           </div>
 
-          {/* النص */}
+          {/* Text */}
           <div className="flex-1">
             <p className="text-[0.9rem] text-gray-300">{item.subtitle}</p>
           </div>

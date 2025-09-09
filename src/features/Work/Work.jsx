@@ -1,4 +1,3 @@
-// import Myphoto from '../../assets/images/Portfolio_image.png';
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import Contact from '../../components/Contact.jsx';
 import Footer from '../../components/footer/Footer.jsx';
@@ -80,25 +79,6 @@ const Work = () => {
         <Navbar />
         <div className={`${HeroSectionStyle} pb-12 pt-20 md:pt-20 px-10 z-10`}>
           <ProjectsGrid />
-          {/* <div className={leftDiv}>
-            <h1 className={H1Style}>
-              My Services <span className="text-red-700">.</span>
-            </h1>
-            <p className={PStyle}>
-              Designing and building scalable back-end systems and IoT integrations with
-               a focus on security, reliability, and clean architectures. From APIs & data
-                pipelines to cloud-native deployments and automation.
-            </p>
-            <Steps/>
-          </div>
-          <div className={`${rightDiv}`}>
-            <div className='w-full p-1 bg-gradient-to-br from-gray-900 to-gray-800 rounded-lg shadow-lg mb-6'>
-              <Swipper features={Features} />
-            </div>
-            <div>
-              <BackendHighlights />
-            </div>
-          </div> */}
         </div>
         <div className='hidden md:flex bg-gray-700 w-fit mx-auto mb-0 py-4 px-8 rounded-full'>
           <Contact className={`hidden md:flex`} />

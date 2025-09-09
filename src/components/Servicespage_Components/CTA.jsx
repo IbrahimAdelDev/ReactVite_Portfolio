@@ -1,4 +1,3 @@
-import React from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function CTA() {
@@ -11,7 +10,6 @@ export default function CTA() {
                  rounded-xl shadow-lg mb-12 md:mx-24 mx-16"
     >
       <div className="flex flex-col md:flex-row md:items-center md:justify-between text-center md:text-left gap-4">
-        {/* النص */}
         <div>
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
             Have a project in mind?
@@ -21,7 +19,6 @@ export default function CTA() {
           </p>
         </div>
 
-        {/* الزرار */}
         <button
           onClick={() => navigate("/contact")}
           className="inline-flex items-center justify-center gap-2 px-6 py-3 

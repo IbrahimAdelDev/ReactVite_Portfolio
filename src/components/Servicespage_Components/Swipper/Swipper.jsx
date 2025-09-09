@@ -1,71 +1,10 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
-// import {
-//   FaProjectDiagram,
-//   FaShieldAlt,
-//   FaDatabase,
-//   FaBolt,
-//   FaNetworkWired,
-//   FaCogs,
-//   FaMoneyBillWave,
-//   FaSyncAlt,
-//   FaDocker,
-// } from "react-icons/fa";
 
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./swiper-custom.css";
-
-// === Backend + Fullstack Features ===
-// const Features = [
-//   {
-//     title: "API Design & Microservices",
-//     desc: "Clean REST/GraphQL APIs with scalable microservices.",
-//     icon: <FaProjectDiagram className="text-red-700 text-4xl" />,
-//   },
-//   {
-//     title: "Auth & Security",
-//     desc: "JWT, OAuth2, RBAC/ABAC, and OWASP best practices.",
-//     icon: <FaShieldAlt className="text-red-700 text-4xl" />,
-//   },
-//   {
-//     title: "Databases & ORM",
-//     desc: "PostgreSQL, MySQL, MongoDB with efficient indexing.",
-//     icon: <FaDatabase className="text-red-700 text-4xl" />,
-//   },
-//   {
-//     title: "Caching & Performance",
-//     desc: "Boosting throughput with Redis and query optimization.",
-//     icon: <FaBolt className="text-red-700 text-4xl" />,
-//   },
-//   {
-//     title: "IoT & Data Pipelines",
-//     desc: "Ingesting device telemetry and real-time analytics.",
-//     icon: <FaNetworkWired className="text-red-700 text-4xl" />,
-//   },
-//   {
-//     title: "End-to-End Features",
-//     desc: "From schema and APIs to UI integration.",
-//     icon: <FaCogs className="text-red-700 text-4xl" />,
-//   },
-//   {
-//     title: "Payments & Billing",
-//     desc: "Apple Pay, Stripe, and idempotent order workflows.",
-//     icon: <FaMoneyBillWave className="text-red-700 text-4xl" />,
-//   },
-//   {
-//     title: "Real-Time UX",
-//     desc: "Live updates via WebSockets/SSE with optimistic UI.",
-//     icon: <FaSyncAlt className="text-red-700 text-4xl" />,
-//   },
-//   {
-//     title: "CI/CD & Runtime",
-//     desc: "Dockerized services, GitHub Actions, zero-downtime deploys.",
-//     icon: <FaDocker className="text-red-700 text-4xl" />,
-//   },
-// ];
 
 export default function FeaturesSwiper(props) {
 

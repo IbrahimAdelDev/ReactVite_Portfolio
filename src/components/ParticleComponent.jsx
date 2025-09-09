@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import config from './../../particlesjs-config.json';
-import bgHeroImage from '../assets/images/bg-portfolio.png'; // أضف هذا السطر
+import bgHeroImage from '../assets/images/bg-portfolio.png'; 
 
 
 const ParticleComponent = ({ className = '' }) => {

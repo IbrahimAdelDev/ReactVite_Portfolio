@@ -1,5 +1,3 @@
-import React from "react";
-
 const highlights = [
   { subtitle: "IoT Systems Integration & Data Pipelines" },
   { subtitle: "Authentication & Security (JWT, Role-based Access)" },
@@ -14,7 +12,7 @@ const highlights = [
 export default function Highlights() {
   return (
     <div className="grid gap-4 grid-cols-1 sm:grid-cols-2">
-      {/* أول واحدة مميزة - تاخد العرض كله */}
+      {/* Full Width */}
       <div className="col-span-1 sm:col-span-2 p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-lg">
         <h3 className="text-lg font-semibold text-white mb-2">
           I turn ideas into secure, scalable backends.
@@ -26,7 +24,7 @@ export default function Highlights() {
         </p>
       </div>
 
-      {/* باقي الهايلايتس */}
+      {/* Remaining Highlights */}
       {highlights.map((item, idx) => (
         <div
           key={idx}

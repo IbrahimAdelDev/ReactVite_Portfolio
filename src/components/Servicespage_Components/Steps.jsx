@@ -1,5 +1,3 @@
-import React from "react";
-
 const steps = [
   {
     number: "1",
@@ -28,7 +26,7 @@ export default function Process() {
     <div className="space-y-6 my-10 flex flex-col items-center md:items-start">
       {steps.map((step, i) => (
         <div key={i} className="flex items-start gap-4">
-          {/* الرقم في دايرة */}
+          {/* Number in Circle */}
           <div className="relative text-gray-950 font-bold text-sm">
             <div className="relative flex items-center justify-center 
               w-8 h-8 rounded-full 
@@ -38,7 +36,7 @@ export default function Process() {
             <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">{step.number}</span>
           </div>
 
-          {/* العنوان والوصف */}
+          {/* Title and Description */}
           <div>
             <h3 className="text-white font-semibold">{step.title}</h3>
             <p className="text-gray-400 text-sm">{step.desc}</p>

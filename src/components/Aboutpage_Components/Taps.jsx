@@ -62,7 +62,6 @@ function a11yProps(index) {
   };
 }
 
-// === Reusable Component ===
 export default function Taps({ tabs }) {
   const [value, setValue] = React.useState(0);
 
@@ -93,7 +92,7 @@ export default function Taps({ tabs }) {
           scrollButtons="auto"
           sx={{
             "& .MuiTab-root": {
-              color: "rgba(255,255,255,0.6)", // رمادي فاتح
+              color: "rgba(255,255,255,0.6)",
               fontWeight: "600",
               fontSize: "0.9rem",
               minWidth: "auto",
@@ -102,13 +101,13 @@ export default function Taps({ tabs }) {
               textTransform: "none",
             },
             "& .MuiTab-root:hover": {
-              color: "#ffffff", // أبيض عند hover
+              color: "#ffffff", 
             },
             "& .MuiTab-root.Mui-selected": {
-              color: "#ef4444", // أحمر أساسي للمختار
+              color: "#ef4444",
             },
             "& .MuiTabs-indicator": {
-              backgroundColor: "#ef4444", // أحمر للـ indicator
+              backgroundColor: "#ef4444", 
               height: "3px",
               borderRadius: "2px",
               transition: "all 0.3s ease",

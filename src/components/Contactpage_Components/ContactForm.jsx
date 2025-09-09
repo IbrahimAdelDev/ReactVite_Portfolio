@@ -11,17 +11,17 @@ export default function ContactForm() {
     emailjs
       .sendForm(
         "service_ze9x0o7",     // Service ID
-        "template_rbzgbfj",   // Template ID (لازم تعمله في EmailJS عشان يوصلك إنت)
+        "template_rbzgbfj",   // Template ID 
         form,
         "5YdlDBUZ1E5wUQF9g"    // Public Key
       )
       .then(() => {
         // 2️⃣ يبعت للعميل تأكيد
         return emailjs.sendForm(
-          "service_ze9x0o7",     // نفس Service ID
-          "template_t7zea35",  // Template ID (auto-reply للعميل)
+          "service_ze9x0o7",     // Service ID
+          "template_t7zea35",  // Template ID
           form,
-          "5YdlDBUZ1E5wUQF9g"
+          "5YdlDBUZ1E5wUQF9g"   // Public Key
         );
       })
       .then(
@@ -42,7 +42,7 @@ export default function ContactForm() {
                  shadow-md"
     >
       <form onSubmit={handleSubmit} className="space-y-6">
-        {/* Row 1: Name + Email */}
+        {/* Name + Email */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div>
             <label className="block text-sm text-gray-300 mb-2">

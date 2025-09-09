@@ -1,5 +1,3 @@
-
-
 export const HeroSectionStyle = 'md:flex block justify-around items-center text-white relative';
 export const H1Style = 'text-center md:text-left text-4xl leading-[1.2] font-[Sora] font-semibold my-4';
 export const PStyle =

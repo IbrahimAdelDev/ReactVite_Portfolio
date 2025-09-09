@@ -1,5 +1,3 @@
-import React from "react";
-
 const experiences = [
   {
     role: "Backend Developer Intern",
@@ -50,12 +48,12 @@ export default function Experience() {
     <div className="relative border-l-2 border-gray-700 ml-6">
       {experiences.map((exp, index) => (
         <div key={index} className="mb-10 ml-6 relative">
-          {/* النقطة الحمراء */}
+
           <span className="absolute -left-7 top-2 w-2 h-2 bg-red-500 rounded-full shadow"></span>
 
-          {/* الكارت */}
+          {/* Card */}
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-lg p-5">
-            {/* الدور + التاريخ */}
+            {/* Date + Role */}
             <div className="flex justify-between items-start mb-1">
               <h3 className="text-base font-semibold text-white">{exp.role}</h3>
               <span className="text-xs text-gray-400 whitespace-nowrap ml-4">
@@ -63,10 +61,9 @@ export default function Experience() {
               </span>
             </div>
 
-            {/* الشركة */}
+            {/* Company */}
             <span className="block text-sm text-gray-300 mb-2">{exp.company}</span>
 
-            {/* النقاط */}
             <ul className="list-disc list-inside space-y-1 text-gray-300 text-sm pl-1">
               {exp.points.map((point, i) => (
                 <li key={i}>{point}</li>

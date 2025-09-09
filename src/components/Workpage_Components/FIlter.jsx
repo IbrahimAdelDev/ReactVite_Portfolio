@@ -136,7 +136,7 @@ export default function ProjectsGrid() {
 
   return (
     <div className="w-full mt-4 md:mt-0 mx-auto px-6 md:px-12 py-8">
-      {/* البحث + الترتيب + الكاتيجوريز */}
+      {/* Search + Sort + Categories */}
       <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between gap-4 mb-8">
         <div className="flex flex-col md:flex-row items-center gap-3">
           <input
@@ -184,7 +184,6 @@ export default function ProjectsGrid() {
         </div>
       </div>
 
-      {/* السويبر */}
       <div className="mb-12">
         <Swiper
           modules={[Pagination, Autoplay, FreeMode]}
@@ -217,19 +216,19 @@ export default function ProjectsGrid() {
                     className="w-full h-32 md:h-36 object-cover transition-transform duration-500 group-hover:scale-105 relative z-10"
                   />
 
-                  {/* الدومين */}
+                  {/* Domain */}
                   <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-0.5 rounded-full z-20">
                     {extractDomain(proj.demo)}
                   </div>
 
-                  {/* المحتوى السفلي */}
+                  {/* Bottom Content */}
                   <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/60 to-transparent z-20">
                     <h3 className="text-white text-sm md:text-base font-bold">{proj.title}</h3>
                     <p className="text-gray-200 text-xs line-clamp-2">{proj.description}</p>
                     <div className="mt-2 flex items-center justify-between relative">
                       <span className="text-red-700 text-sm font-semibold inline-flex items-center gap-1 relative">
                         View
-                        {/* الإضاءة الحمراء */}
+                        {/* Red Glow */}
                         <span className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-red-500/50 to-white/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700 -z-10"></span>
                         <span className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all">
                           →
@@ -252,7 +251,7 @@ export default function ProjectsGrid() {
         </Swiper>
       </div>
 
-      {/* الجريد */}
+      {/* Grid */}
       <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {filteredProjects.map((proj) => (
           <a
@@ -294,7 +293,6 @@ export default function ProjectsGrid() {
               <div className="flex gap-3 text-xs items-center mt-2 relative">
                 <span className="flex items-center text-red-500 font-semibold relative">
                   View
-                  {/* الإضاءة */}
                   <span className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-24 h-24 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700 -z-10"></span>
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1">
                     →

@@ -1,5 +1,3 @@
-import React from "react";
-
 const education = [
   {
     degree: "Bachelor’s Degree in Electronics & Communications Engineering",
@@ -7,24 +5,6 @@ const education = [
     date: "2021 – 2026 (Expected)",
     location: "Egypt",
   },
-  // {
-  //   degree: "CCNA (Cisco Certified Network Associate)",
-  //   school: "Cisco / NTI",
-  //   date: "2024",
-  //   location: "Egypt"
-  // },
-  // {
-  //   degree: "PHP Web Development Diploma",
-  //   school: "Information Technology Institute (ITI)",
-  //   date: "2024",
-  //   location: "Egypt"
-  // },
-  // {
-  //   degree: "ALX Software Engineering Scholarship",
-  //   school: "ALX",
-  //   date: "2023 – 2024",
-  //   location: "Remote"
-  // }
 ];
 
 export default function Education() {

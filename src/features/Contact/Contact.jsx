@@ -1,4 +1,3 @@
-// import Myphoto from '../../assets/images/Portfolio_image.png';
 import Navbar from '../../components/Navbar/Navbar.jsx';
 import Contact from '../../components/Contact.jsx';
 import Footer from '../../components/footer/Footer.jsx';
