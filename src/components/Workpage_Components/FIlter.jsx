@@ -3,90 +3,105 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import Portfolio from "./../../assets/images/projrcts/portfolio.png";
+import Facebook from "./../../assets/images/projrcts/facebook.png";
+import CP from "./../../assets/images/projrcts/cpp.jpg";
+import E_learning from "./../../assets/images/projrcts/elearning.png";
+import Hprep from "./../../assets/images/projrcts/hprep.png";
+import ReactTeachHub from "./../../assets/images/projrcts/teachhub.png";
+import GuessMyNumber from "./../../assets/images/projrcts/guess.png";
 
 const projects = [
   {
     id: 1,
-    title: "Dashboard SA",
-    categories: ["Web", "Dashboard"],
-    description: "Analytics dashboard for sales tracking",
-    date: "2024",
-    image:
-      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
-    github: "https://github.com/username/dashboard-sa",
-    demo: "https://dashboard-sa.netlify.app",
+    title: "Portfolio App",
+    categories: ["Frontend", "Web"],
+    description: "Personal portfolio application",
+    date: "2025",
+    image: Portfolio,
+    github: "https://github.com/IbrahimAdelDev/ReactVite_Portfolio",
+    demo: "https://ibrahimadelportfolio.vercel.app",
     featured: true,
   },
   {
     id: 2,
-    title: "Kati",
-    categories: ["E-commerce", "Web"],
-    description: "Modern e-commerce website",
-    date: "2024",
-    image:
-      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
-    github: "https://github.com/username/kati",
-    demo: "https://kati.netlify.app",
+    title: "Facebook Login",
+    categories: ["frontend", "Web", "Other"],
+    description: "Facebook login integration example",
+    date: "2022",
+    image: Facebook,
+    github: "https://github.com/IbrahimAdelDev/Facebook_Login",
+    demo: "https://facebook-login-demo.vercel.app",
     featured: true,
   },
   {
     id: 3,
-    title: "Mop App",
-    categories: ["Mobile"],
-    description: "Cross-platform mobile app",
+    title: "Problem Solving Analytics",
+    categories: ["Problem Solving", "Backend", "Other"],
+    description: "Analytics dashboard for competitive programming",
     date: "2024",
-    image:
-      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
-    github: "https://github.com/username/mop-app",
-    demo: "https://mopapp-sa.netlify.app",
+    image: CP,
+    github: "https://github.com/IbrahimAdelDev/CP4",
+    demo: "https://codeforces.com/profile/Ibrahimadel",
     featured: true,
   },
   {
     id: 4,
-    title: "AI Assistant",
-    categories: ["AI", "Web"],
+    title: "E-Learning Platform",
+    categories: ["Web", "Frontend"],
     description: "Smart AI-powered assistant",
     date: "2023",
-    image:
-      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
-    github: "https://github.com/username/ai-assistant",
-    demo: "https://ai-assistant.netlify.app",
+    image: E_learning,
+    github: "https://github.com/IbrahimAdelDev/Native_Frontend_E-learning",
+    demo: "https://e-learning-one-kappa.vercel.app",
     featured: true,
   },
   {
     id: 5,
-    title: "Finance Tracker",
-    categories: ["Mobile", "Finance"],
-    description: "App for tracking personal finances",
-    date: "2023",
-    image:
-      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
-    github: "https://github.com/username/finance-tracker",
-    demo: "https://finance-tracker.netlify.app",
+    title: "Landing Page",
+    categories: ["Web", "Frontend"],
+    description: "Landing page from Homains training",
+    date: "2025",
+    image: Hprep,
+    github: "https://github.com/IbrahimAdelDev/Angular_Preparing-For-Project",
+    demo: "https://h-prep.vercel.app",
     featured: true,
   },
   {
     id: 6,
-    title: "Portfolio V2",
-    categories: ["Web"],
-    description: "Personal portfolio website",
-    date: "2022",
-    image:
-      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
-    github: "https://github.com/username/portfolio-v2",
-    demo: "https://portfolio-v2.netlify.app",
+    title: "React Teach Hub",
+    categories: ["Web", "Frontend"],
+    description: "Educational platform for teachers (DEPI)",
+    date: "2025",
+    image: ReactTeachHub,
+    github: "https://github.com/IbrahimAdelDev/React-TeachHub",
+    demo: "https://react-teach-hub.vercel.app",
+    featured: true,
+  },
+    {
+    id: 7,
+    title: "Guess My Number",
+    categories: ["Web, Frontend", "Game"],
+    description: "A fun number guessing game",
+    date: "2024",
+    image: GuessMyNumber,
+    github: "https://github.com/IbrahimAdelDev/guessmynumber",
+    demo: "https://guessmynumber-jonas.vercel.app",
     featured: true,
   },
 ];
 
 const categories = [
   "All",
+  "Backend",
+  "Frontend",
   "Web",
-  "E-commerce",
+  // "E-commerce",
   "Dashboard",
-  "Mobile",
-  "AI",
-  "Finance",
+  "Problem Solving",
+  "IOT",
+  "Game",
+  "Other",
 ];
 
 export default function ProjectsGrid() {
@@ -122,7 +137,7 @@ export default function ProjectsGrid() {
   return (
     <div className="w-full mt-4 md:mt-0 mx-auto px-6 md:px-12 py-8">
       {/* البحث + الترتيب + الكاتيجوريز */}
-      <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-4 mb-8">
+      <div className="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between gap-4 mb-8">
         <div className="flex flex-col md:flex-row items-center gap-3">
           <input
             type="text"
