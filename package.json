@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@fontsource/roboto": "^5.2.6",
@@ -17,6 +18,7 @@
     "firebase": "^11.9.0",
     "framework7": "^8.3.4",
     "framework7-react": "^8.3.4",
+    "lucide-react": "^0.542.0",
     "next-themes": "^0.4.6",
     "particles.js": "^2.0.0",
     "react": "^19.0.0",

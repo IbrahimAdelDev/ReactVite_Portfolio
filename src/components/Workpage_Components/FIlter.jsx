@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// البيانات
 const projects = [
   {
     id: 1,
@@ -49,9 +48,10 @@ const projects = [
     description: "Smart AI-powered assistant",
     date: "2023",
     image:
-      "https://gratisography.com/wp-content/uploads/2024/10/gratisography-virtual-reality-800x525.jpg",
+      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
     github: "https://github.com/username/ai-assistant",
     demo: "https://ai-assistant.netlify.app",
+    featured: true,
   },
   {
     id: 5,
@@ -60,9 +60,10 @@ const projects = [
     description: "App for tracking personal finances",
     date: "2023",
     image:
-      "https://gratisography.com/wp-content/uploads/2024/09/gratisography-smartphone-800x525.jpg",
+      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
     github: "https://github.com/username/finance-tracker",
     demo: "https://finance-tracker.netlify.app",
+    featured: true,
   },
   {
     id: 6,
@@ -71,9 +72,10 @@ const projects = [
     description: "Personal portfolio website",
     date: "2022",
     image:
-      "https://gratisography.com/wp-content/uploads/2024/08/gratisography-computer-800x525.jpg",
+      "https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg",
     github: "https://github.com/username/portfolio-v2",
     demo: "https://portfolio-v2.netlify.app",
+    featured: true,
   },
 ];
 
@@ -92,42 +94,44 @@ export default function ProjectsGrid() {
   const [sortOrder, setSortOrder] = useState("Newest");
   const [searchTerm, setSearchTerm] = useState("");
 
-  // فلترة العناصر
   let filteredProjects =
     activeCategory === "All"
       ? projects
       : projects.filter((p) => p.categories.includes(activeCategory));
 
-  // فلترة بالسيرش
   if (searchTerm.trim() !== "") {
     filteredProjects = filteredProjects.filter((p) =>
       p.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
   }
 
-  // ترتيب
   filteredProjects = [...filteredProjects].sort((a, b) => {
     if (sortOrder === "Newest") return b.date.localeCompare(a.date);
     if (sortOrder === "Oldest") return a.date.localeCompare(b.date);
     return 0;
   });
 
+  const extractDomain = (url) => {
+    try {
+      return new URL(url).hostname.replace("www.", "");
+    } catch {
+      return url;
+    }
+  };
+
   return (
-    <div className="w-full mx-auto px-6 md:px-12 py-8">
+    <div className="w-full mt-4 mx-auto px-6 md:px-12 py-8">
       {/* البحث + الترتيب + الكاتيجوريز */}
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-8">
-        {/* Search + Sort */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-          {/* سيرش */}
+      <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-4 mb-8">
+        <div className="flex flex-col md:flex-row items-center gap-3">
           <input
             type="text"
-            placeholder="Search project titles..."
+            placeholder="Search project"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="px-3 py-1.5 rounded-md border border-gray-600 bg-transparent text-gray-200 placeholder-gray-400 text-sm focus:outline-none focus:border-red-500 w-64"
           />
 
-          {/* Sort Switch */}
           <div className="flex items-center gap-2">
             <span className="text-gray-400 text-xs">Sort</span>
             <div className="flex rounded-full border border-gray-600 overflow-hidden">
@@ -148,7 +152,6 @@ export default function ProjectsGrid() {
           </div>
         </div>
 
-        {/* الكاتيجوريز */}
         <div className="flex flex-wrap justify-center gap-2">
           {categories.map((cat) => (
             <button
@@ -166,16 +169,22 @@ export default function ProjectsGrid() {
         </div>
       </div>
 
-      {/* السويبر (Featured Projects) */}
+      {/* السويبر */}
       <div className="mb-12">
         <Swiper
-          modules={[Pagination, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1.2}
-          centeredSlides={true}
+          modules={[Pagination, Autoplay, FreeMode]}
+          spaceBetween={20}
+          breakpoints={{
+            0: { slidesPerView: 1.5 },
+            640: { slidesPerView: 1.8 },
+            768: { slidesPerView: 2.2 },
+            1024: { slidesPerView: 3.2 },
+            1280: { slidesPerView: 3.2 },
+          }}
           loop={true}
-          autoplay={{ delay: 3500 }}
-          pagination={{ clickable: true }}
+          freeMode={true}
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          speed={1000}
         >
           {projects
             .filter((p) => p.featured)
@@ -185,24 +194,42 @@ export default function ProjectsGrid() {
                   href={proj.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block relative rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-800 to-gray-900"
+                  className="relative block rounded-xl overflow-hidden shadow-lg bg-gradient-to-br from-gray-800 to-gray-900 group"
                 >
-                  {/* الصورة */}
                   <img
                     src={proj.image}
                     alt={proj.title}
-                    className="w-full h-64 object-cover"
+                    className="w-full h-32 md:h-36 object-cover transition-transform duration-500 group-hover:scale-105 relative z-10"
                   />
 
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/40 flex flex-col justify-end p-5">
-                    <h3 className="text-white text-xl font-bold">
-                      {proj.title}
-                    </h3>
-                    <p className="text-gray-200 text-sm">{proj.description}</p>
-                    <span className="text-red-400 text-sm mt-2 inline-flex items-center gap-1">
-                      View →
-                    </span>
+                  {/* الدومين */}
+                  <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-0.5 rounded-full z-20">
+                    {extractDomain(proj.demo)}
+                  </div>
+
+                  {/* المحتوى السفلي */}
+                  <div className="absolute inset-x-0 bottom-0 p-3 bg-gradient-to-t from-black/60 to-transparent z-20">
+                    <h3 className="text-white text-sm md:text-base font-bold">{proj.title}</h3>
+                    <p className="text-gray-200 text-xs line-clamp-2">{proj.description}</p>
+                    <div className="mt-2 flex items-center justify-between relative">
+                      <span className="text-red-700 text-sm font-semibold inline-flex items-center gap-1 relative">
+                        View
+                        {/* الإضاءة الحمراء */}
+                        <span className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-32 h-32 bg-gradient-to-br from-red-500/50 to-white/10 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700 -z-10"></span>
+                        <span className="opacity-0 group-hover:opacity-100 transform group-hover:translate-x-1 transition-all">
+                          →
+                        </span>
+                      </span>
+                      <a
+                        href={proj.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gray-300 text-xs hover:underline"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        GitHub
+                      </a>
+                    </div>
                   </div>
                 </a>
               </SwiperSlide>
@@ -218,16 +245,14 @@ export default function ProjectsGrid() {
             href={proj.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="relative rounded-lg overflow-hidden shadow-md bg-gradient-to-br from-gray-800 to-gray-900 group block transform transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
+            className="relative rounded-lg overflow-hidden shadow-md bg-gradient-to-br from-gray-800 to-gray-900 group block transform transition-all duration-300 hover:scale-[1.03] hover:shadow-lg"
           >
-            {/* الصورة */}
             <img
               src={proj.image}
               alt={proj.title}
-              className="w-full h-40 object-cover transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-36 object-cover transition-transform duration-500 group-hover:scale-105"
             />
 
-            {/* الكاتيجوريز فوق */}
             <div className="absolute top-2 left-2 flex gap-1 flex-wrap">
               {proj.categories.map((cat, idx) => (
                 <span
@@ -239,8 +264,7 @@ export default function ProjectsGrid() {
               ))}
             </div>
 
-            {/* المحتوى */}
-            <div className="p-3 flex flex-col justify-between min-h-[100px]">
+            <div className="p-3 flex flex-col justify-between min-h-[100px] relative">
               <div>
                 <h3 className="text-white text-base font-semibold mb-1">
                   {proj.title}
@@ -252,9 +276,11 @@ export default function ProjectsGrid() {
                 </p>
               </div>
 
-              <div className="flex gap-3 text-xs items-center mt-2">
-                <span className="flex items-center text-red-500 font-semibold">
+              <div className="flex gap-3 text-xs items-center mt-2 relative">
+                <span className="flex items-center text-red-500 font-semibold relative">
                   View
+                  {/* الإضاءة */}
+                  <span className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-24 h-24 blur-2xl rounded-full opacity-0 group-hover:opacity-100 transition duration-700 -z-10"></span>
                   <span className="ml-1 opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1">
                     →
                   </span>
