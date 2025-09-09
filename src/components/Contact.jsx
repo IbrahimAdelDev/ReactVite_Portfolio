@@ -1,10 +1,10 @@
-import React from 'react'
 import WhatsappIcon from '../assets/images/Platform=WhatsApp, Color=Original.svg';
 import Github from '../assets/images/Platform=Github, Color=Negative.svg';
 import Linkedin from '../assets/images/Platform=LinkedIn, Color=Original.svg';
 import Gmail from '../assets/images/g-mail.svg';
 import Phone from '../assets/images/call-02.svg';
 import CV from '../assets/images/Load_list_alt_light.svg';
+import CVPDF from "../assets/CV.pdf";
 
 const Contact = ({ className }) => {
   return (
@@ -24,8 +24,8 @@ const Contact = ({ className }) => {
       <a href="tel:+201028959943" target="_blank" rel="noopener noreferrer">
         <img src={Phone} alt="Phone" className="w-6 h-6 hover:opacity-60" />
       </a>
-      <a href="tel:+201028959943" target="_blank" rel="noopener noreferrer">
-        <img src={CV} alt="Phone" className="w-6 h-6 hover:opacity-60" />
+      <a href={CVPDF} target="_blank" rel="noopener noreferrer">
+        <img src={CV} alt="CV" className="w-6 h-6 hover:opacity-60" />
       </a>
     </div>
   )

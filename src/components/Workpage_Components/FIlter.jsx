@@ -120,7 +120,7 @@ export default function ProjectsGrid() {
   };
 
   return (
-    <div className="w-full mt-4 mx-auto px-6 md:px-12 py-8">
+    <div className="w-full mt-4 md:mt-0 mx-auto px-6 md:px-12 py-8">
       {/* البحث + الترتيب + الكاتيجوريز */}
       <div className="flex flex-col lg:flex-row items-center lg:justify-between gap-4 mb-8">
         <div className="flex flex-col md:flex-row items-center gap-3">
