@@ -78,7 +78,7 @@ const Work = () => {
         style={{backgroundImage: `url(${bgHeroImage})`}}
       >
         <Navbar />
-        <div className={`${HeroSectionStyle} pt-20 md:pt-20 px-10 z-10`}>
+        <div className={`${HeroSectionStyle} pb-12 pt-20 md:pt-20 px-10 z-10`}>
           <ProjectsGrid />
           {/* <div className={leftDiv}>
             <h1 className={H1Style}>

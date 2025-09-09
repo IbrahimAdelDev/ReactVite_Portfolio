@@ -10,7 +10,7 @@ const contactInfo = [
   {
     icon: <Linkedin size={18} />,
     label: "LinkedIn",
-    value: "mo-abdelsalam-frontend",
+    value: "ibrahimadeldev",
     href: "https://www.linkedin.com/in/ibrahimadeldev/",
   },
   {
@@ -23,7 +23,7 @@ const contactInfo = [
     icon: <MapPin size={18} />,
     label: "Location",
     value: "Damietta, Egypt",
-    extra: "Response: 24–48h",
+    extra: "Response: 24-48h",
     href: "https://maps.google.com/?q=Damietta,Egypt",
   },
 ];
@@ -60,7 +60,7 @@ export default function ContactDetails() {
                 href={item.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-white font-medium hover:text-red-400 transition"
+                className="text-xs text-white font-medium hover:text-red-400 transition"
               >
                 {item.value}
               </a>
