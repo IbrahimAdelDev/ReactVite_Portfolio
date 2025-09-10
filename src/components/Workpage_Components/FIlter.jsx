@@ -10,6 +10,7 @@ import E_learning from "./../../assets/images/projrcts/elearning.png";
 import Hprep from "./../../assets/images/projrcts/hprep.png";
 import ReactTeachHub from "./../../assets/images/projrcts/teachhub.png";
 import GuessMyNumber from "./../../assets/images/projrcts/guess.png";
+import TeachHubApi from "./../../assets/images/projrcts/teachhubapi.png";
 
 const projects = [
   {
@@ -25,13 +26,13 @@ const projects = [
   },
   {
     id: 2,
-    title: "Facebook Login",
-    categories: ["frontend", "Web", "Other"],
-    description: "Facebook login integration example",
-    date: "2022",
-    image: Facebook,
-    github: "https://github.com/IbrahimAdelDev/Facebook_Login",
-    demo: "https://facebook-login-demo.vercel.app",
+    title: "TeachHub-Api(Node.js)",
+    categories: ["Web, Backend"],
+    description: "A RESTful API for the TeachHub platform",
+    date: "2025",
+    image: TeachHubApi,
+    github: "https://github.com/IbrahimAdelDev/Node.js-TeachHub",
+    demo: "https://app.swaggerhub.com/apis-docs/ibrahim-5cf/TeachHub/1.0.0",
     featured: true,
   },
   {
@@ -78,7 +79,7 @@ const projects = [
     demo: "https://react-teach-hub.vercel.app",
     featured: true,
   },
-    {
+  {
     id: 7,
     title: "Guess My Number",
     categories: ["Web, Frontend", "Game"],
@@ -87,6 +88,17 @@ const projects = [
     image: GuessMyNumber,
     github: "https://github.com/IbrahimAdelDev/guessmynumber",
     demo: "https://guessmynumber-jonas.vercel.app",
+    featured: true,
+  },
+  {
+    id: 8,
+    title: "Facebook Login",
+    categories: ["frontend", "Web", "Other"],
+    description: "Facebook login integration example",
+    date: "2022",
+    image: Facebook,
+    github: "https://github.com/IbrahimAdelDev/Facebook_Login",
+    demo: "https://facebook-login-demo.vercel.app",
     featured: true,
   },
 ];
