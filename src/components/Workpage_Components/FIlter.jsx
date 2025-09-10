@@ -32,7 +32,7 @@ const projects = [
     date: "2025",
     image: TeachHubApi,
     github: "https://github.com/IbrahimAdelDev/Node.js-TeachHub",
-    demo: "https://app.swaggerhub.com/apis-docs/ibrahim-5cf/TeachHub/1.0.0",
+    demo: "https://node-js-teachhub.onrender.com/api-docs/",
     featured: true,
   },
   {
