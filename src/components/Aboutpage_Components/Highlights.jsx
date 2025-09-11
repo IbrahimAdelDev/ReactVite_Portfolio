@@ -24,7 +24,7 @@ export default function Highlights() {
 
           {/* Text */}
           <div className="flex-1">
-            <p className="text-[0.9rem] text-gray-300">{item.subtitle}</p>
+            <p className="text-[0.9rem] text-gray-300 text-justify">{item.subtitle}</p>
           </div>
         </div>
       ))}

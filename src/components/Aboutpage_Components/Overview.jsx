@@ -17,7 +17,7 @@ export default function Highlights() {
         <h3 className="text-lg font-semibold text-white mb-2">
           I turn ideas into secure, scalable backends.
         </h3>
-        <p className="text-gray-400 text-sm">
+        <p className="text-gray-400 text-sm text-justify">
           From real-time APIs and authentication systems to IoT integrations
           and data pipelines, I focus on reliability, performance, and clean
           architecture.
@@ -34,7 +34,7 @@ export default function Highlights() {
             <span className="inline-flex items-center justify-center w-2 h-2 bg-red-500 rounded-full shadow"></span>
           </div>
           <div className="flex-1">
-            <p className="text-sm text-gray-300">{item.subtitle}</p>
+            <p className="text-sm text-gray-300 text-justify">{item.subtitle}</p>
           </div>
         </div>
       ))}

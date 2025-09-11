@@ -13,7 +13,7 @@ export default function Education() {
       {education.map((edu, index) => (
         <div
           key={index}
-          className="flex justify-between items-start bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-md p-5"
+          className="flex flex-col sm:flex-row justify-between items-start bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-md p-5"
         >
           {/* Left Side */}
           <div>
@@ -24,7 +24,7 @@ export default function Education() {
           </div>
 
           {/* Right Side */}
-          <span className="text-sm text-gray-400 whitespace-nowrap ml-4">
+          <span className="text-sm text-gray-400 whitespace-nowrap ml-0 sm:ml-4">
             {edu.date}
           </span>
         </div>

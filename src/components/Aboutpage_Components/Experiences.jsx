@@ -54,9 +54,9 @@ export default function Experience() {
           {/* Card */}
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-lg shadow-lg p-5">
             {/* Date + Role */}
-            <div className="flex justify-between items-start mb-1">
+            <div className="flex flex-col sm:flex-row justify-between items-start mb-1">
               <h3 className="text-base font-semibold text-white">{exp.role}</h3>
-              <span className="text-xs text-gray-400 whitespace-nowrap ml-4">
+              <span className="text-xs text-gray-400 whitespace-nowrap m-auto sm:ml-4">
                 {exp.date}
               </span>
             </div>
@@ -66,7 +66,7 @@ export default function Experience() {
 
             <ul className="list-disc list-inside space-y-1 text-gray-300 text-sm pl-1">
               {exp.points.map((point, i) => (
-                <li key={i}>{point}</li>
+                <li key={i} className="text-justify">{point}</li>
               ))}
             </ul>
           </div>
