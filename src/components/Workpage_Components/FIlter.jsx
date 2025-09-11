@@ -27,7 +27,7 @@ const projects = [
   {
     id: 2,
     title: "TeachHub-Api(Node.js)",
-    categories: ["Web, Backend"],
+    categories: ["Web", "Backend"],
     description: "A RESTful API for the TeachHub platform",
     date: "2025",
     image: TeachHubApi,
