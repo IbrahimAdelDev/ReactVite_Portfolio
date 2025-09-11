@@ -56,7 +56,7 @@ export default function Experience() {
             {/* Date + Role */}
             <div className="flex flex-col sm:flex-row justify-between items-start mb-1">
               <h3 className="text-base font-semibold text-white">{exp.role}</h3>
-              <span className="text-xs text-gray-400 whitespace-nowrap m-auto sm:ml-4">
+              <span className="text-xs text-gray-400 whitespace-nowrap m-0 sm:ml-4">
                 {exp.date}
               </span>
             </div>
