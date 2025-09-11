@@ -82,7 +82,7 @@ const projects = [
   {
     id: 7,
     title: "Guess My Number",
-    categories: ["Web, Frontend", "Game"],
+    categories: ["Web", "Frontend", "Game"],
     description: "A fun number guessing game",
     date: "2024",
     image: GuessMyNumber,
