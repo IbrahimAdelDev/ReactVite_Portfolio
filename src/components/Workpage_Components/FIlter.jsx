@@ -93,7 +93,7 @@ const projects = [
   {
     id: 8,
     title: "Facebook Login",
-    categories: ["frontend", "Web", "Other"],
+    categories: ["Frontend", "Web", "Other"],
     description: "Facebook login integration example",
     date: "2022",
     image: Facebook,
